@@ -1,6 +1,10 @@
 #!/usr/bin/python
 import re
-import smbus
+
+try:
+    import smbus
+except:
+    raise RuntimeError("trouble importing the smbus module; is i2c installed?")
 
 # ===========================================================================
 # Adafruit_I2C Class
